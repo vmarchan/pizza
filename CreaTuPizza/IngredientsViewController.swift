@@ -13,8 +13,8 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     var sizePizza : String!
     var roughType: String!
     var cheeseType: String!
-//    var selectedIngredients: [String] = []
-    var selectedIngredient : String!
+    var selectedIngredients: [String] = []
+//    var selectedIngredient : String!
     
     let ingredients = ["Jamón", "Pepperoni", "Pavo", "Salchicha", "Aceituna", "Cebolla", "Pimiento", "Piña", "Anchoa", "Atún", "Champiñones"]
     
@@ -69,15 +69,15 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if self.selectedIngredients.count == 0 {
-//            self.selectedIngredients = [self.ingredients[indexPath.row]]
-//        } else {
-//            if !self.selectedIngredients.contains(self.ingredients[indexPath.row]) {
-//                self.selectedIngredients.append(self.ingredients[indexPath.row])
-//            }
-//        }
+        if self.selectedIngredients.count == 0 {
+            self.selectedIngredients = [self.ingredients[indexPath.row]]
+        } else {
+            if !self.selectedIngredients.contains(self.ingredients[indexPath.row]) {
+                self.selectedIngredients.append(self.ingredients[indexPath.row])
+            }
+        }
         
-        self.selectedIngredient = self.ingredients[indexPath.row]
+//        self.selectedIngredient = self.ingredients[indexPath.row]
         
     }
     
@@ -94,8 +94,8 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
             nextPage.sizePizza = self.sizePizza
             nextPage.roughType = self.roughType
             nextPage.cheeseType = self.cheeseType
-//            nextPage.ingredients = self.selectedIngredients
-            nextPage.ingredient = self.selectedIngredient
+            nextPage.ingredients = self.selectedIngredients
+//            nextPage.ingredient = self.selectedIngredient
         }
     }
 

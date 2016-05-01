@@ -14,8 +14,7 @@ class ConfirmViewController: UINavigationController {
     var sizePizza : String!
     var roughType: String!
     var cheeseType: String!
-//    var ingredients: [String]!
-    var ingredient : String!
+    var ingredients = []
     
     @IBOutlet var confirmText: UILabel!
     @IBOutlet var confirmButton: UIButton!
@@ -26,7 +25,7 @@ class ConfirmViewController: UINavigationController {
         // Do any additional setup after loading the view.
         
         self.title = "Confirmar"
-//        confirmButton.setTitle("Confirmar", forState: UIControlState.Normal)
+        confirmButton.setTitle("Aceptar", forState: UIControlState.Normal)
         confirmButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         confirmButton.backgroundColor = UIColor.brownColor()
         confirmButton.layer.cornerRadius = 20
@@ -36,7 +35,7 @@ class ConfirmViewController: UINavigationController {
         confirmButton.layer.shadowOpacity = 1
         confirmButton.layer.shadowOffset = CGSizeMake(1, 1)
         
-        self.confirmText.text = "Tamaño: \(self.sizePizza).\nMasa: \(self.roughType).\nQueso: \(self.cheeseType).\nIngredientes: \(self.ingredient)"
+        self.confirmText.text = "Tamaño: \(self.sizePizza).\nMasa: \(self.roughType).\nQueso: \(self.cheeseType).\nIngredientes: \(self.ingredients)"
     }
 
     override func didReceiveMemoryWarning() {
