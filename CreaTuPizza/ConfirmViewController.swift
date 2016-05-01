@@ -2,40 +2,50 @@
 //  ConfirmViewController.swift
 //  CreaTuPizza
 //
-//  Created by Veronica Marchan on 1/5/16.
+//  Created by Veronica Marchan on 2/5/16.
 //  Copyright © 2016 vmarchan. All rights reserved.
 //
 
 import UIKit
 
-class ConfirmViewController: UINavigationController {
+class ConfirmViewController: UIViewController {
 
+    @IBOutlet var text: UILabel!
+    @IBOutlet var buttonAccept: UIButton!
+    @IBOutlet var buttonBack: UIButton!
     
     var sizePizza : String!
     var roughType: String!
     var cheeseType: String!
-    var ingredients = []
-    
-    @IBOutlet var confirmText: UILabel!
-    @IBOutlet var confirmButton: UIButton!
+    var ingredients: [String] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.title = "Confirmar"
-        confirmButton.setTitle("Aceptar", forState: UIControlState.Normal)
-        confirmButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        confirmButton.backgroundColor = UIColor.brownColor()
-        confirmButton.layer.cornerRadius = 20
-        confirmButton.layer.borderWidth = 0
-        confirmButton.layer.borderColor = UIColor.blackColor().CGColor
-        confirmButton.layer.shadowColor = UIColor.grayColor().CGColor
-        confirmButton.layer.shadowOpacity = 1
-        confirmButton.layer.shadowOffset = CGSizeMake(1, 1)
+        self.title = "Confirmación"
         
-        self.confirmText.text = "Tamaño: \(self.sizePizza).\nMasa: \(self.roughType).\nQueso: \(self.cheeseType).\nIngredientes: \(self.ingredients)"
+        buttonAccept.setTitle("Aceptar", forState: UIControlState.Normal)
+        buttonAccept.backgroundColor = UIColor.brownColor()
+        buttonAccept.layer.cornerRadius = 20
+        buttonAccept.layer.borderWidth = 0
+        buttonAccept.layer.borderColor = UIColor.blackColor().CGColor
+        buttonAccept.layer.shadowColor = UIColor.grayColor().CGColor
+        buttonAccept.layer.shadowOpacity = 1
+        buttonAccept.layer.shadowOffset = CGSizeMake(1, 1)
+        
+        buttonBack.setTitle("Volver", forState: UIControlState.Normal)
+        buttonBack.backgroundColor = UIColor.brownColor()
+        buttonBack.layer.cornerRadius = 20
+        buttonBack.layer.borderWidth = 0
+        buttonBack.layer.borderColor = UIColor.blackColor().CGColor
+        buttonBack.layer.shadowColor = UIColor.grayColor().CGColor
+        buttonBack.layer.shadowOpacity = 1
+        buttonBack.layer.shadowOffset = CGSizeMake(1, 1)
+        
+        self.text.text = "TAMAÑO: \(self.sizePizza).\n\nMASA: \(self.roughType).\n\nQUESO: \(self.cheeseType).\n\nINGREDIENTES: \(self.ingredients)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +53,10 @@ class ConfirmViewController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backActionButton(sender: AnyObject) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         buttonEnter.setTitle("Comenzar", forState: UIControlState.Normal)
-        buttonEnter.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         buttonEnter.backgroundColor = UIColor.brownColor()
         buttonEnter.layer.cornerRadius = 20
         buttonEnter.layer.borderWidth = 0

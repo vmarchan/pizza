@@ -40,7 +40,9 @@
                                     <constraint firstAttribute="height" constant="54" id="q16-Wh-PDN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="I26-M9-X8r" kind="show" identifier="StartSegue" id="rhD-dJ-5O0"/>
                                 </connections>
@@ -309,7 +311,7 @@
                                     <color key="titleColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6nI-Ub-r9A" kind="show" identifier="IngredientsSegue" id="j4p-Qu-WHJ"/>
+                                    <segue destination="6nI-Ub-r9A" kind="show" identifier="IngredientsSegue" id="0IU-7R-z03"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eDp-II-aEP">
@@ -382,8 +384,29 @@
                                 <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A50-JX-sQR">
-                                <rect key="frame" x="12" y="502" width="296" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avI-qv-LuV">
+                                <rect key="frame" x="12" y="143" width="296" height="285"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-S8-afN">
+                                <rect key="frame" x="8" y="436" width="304" height="58"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="mau-BQ-lSj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Volver">
+                                    <color key="titleColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backActionButton:" destination="6nI-Ub-r9A" eventType="touchUpInside" id="uba-KT-zlZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A50-JX-sQR">
+                                <rect key="frame" x="8" y="502" width="304" height="58"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="YRr-lv-uM0"/>
                                 </constraints>
@@ -391,38 +414,59 @@
                                 <state key="normal" title="Confirmar">
                                     <color key="titleColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mqG-rv-Zad" kind="show" identifier="AcceptSegue" id="2Dw-ot-v8p"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avI-qv-LuV">
-                                <rect key="frame" x="16" y="171" width="288" height="315"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="A50-JX-sQR" secondAttribute="trailing" constant="-4" id="43H-Fu-obO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A50-JX-sQR" secondAttribute="trailing" constant="-12" id="43H-Fu-obO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yb2-S8-afN" secondAttribute="trailing" constant="-8" id="9oy-qp-YAe"/>
+                            <constraint firstItem="A50-JX-sQR" firstAttribute="top" secondItem="Yb2-S8-afN" secondAttribute="bottom" constant="8" id="Dhu-d5-YjA"/>
                             <constraint firstItem="v6g-sq-IiY" firstAttribute="top" secondItem="YER-vR-Ytc" secondAttribute="bottom" constant="13" id="GZ8-f6-PUo"/>
+                            <constraint firstItem="Yb2-S8-afN" firstAttribute="leading" secondItem="vA0-zD-RWL" secondAttribute="leadingMargin" constant="-8" id="H0W-4e-8Lf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v6g-sq-IiY" secondAttribute="trailing" id="Hdh-oO-Bfj"/>
                             <constraint firstItem="yuL-7i-i84" firstAttribute="top" secondItem="A50-JX-sQR" secondAttribute="bottom" constant="8" id="MWa-p7-B1V"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="avI-qv-LuV" secondAttribute="trailing" id="atn-40-j2g"/>
-                            <constraint firstItem="A50-JX-sQR" firstAttribute="leading" secondItem="vA0-zD-RWL" secondAttribute="leadingMargin" constant="-4" id="bea-Ay-Myv"/>
-                            <constraint firstItem="A50-JX-sQR" firstAttribute="top" secondItem="avI-qv-LuV" secondAttribute="bottom" constant="16" id="cF7-kz-Zqn"/>
-                            <constraint firstItem="avI-qv-LuV" firstAttribute="top" secondItem="v6g-sq-IiY" secondAttribute="bottom" constant="36" id="ds2-C2-pQ5"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="avI-qv-LuV" secondAttribute="leading" id="pU9-dA-y2c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avI-qv-LuV" secondAttribute="trailing" constant="-4" id="atn-40-j2g"/>
+                            <constraint firstItem="A50-JX-sQR" firstAttribute="leading" secondItem="vA0-zD-RWL" secondAttribute="leadingMargin" constant="-12" id="bea-Ay-Myv"/>
+                            <constraint firstItem="avI-qv-LuV" firstAttribute="top" secondItem="v6g-sq-IiY" secondAttribute="bottom" constant="8" id="ds2-C2-pQ5"/>
+                            <constraint firstItem="Yb2-S8-afN" firstAttribute="top" secondItem="avI-qv-LuV" secondAttribute="bottom" constant="8" id="gOa-Md-gsG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="avI-qv-LuV" secondAttribute="leading" constant="4" id="pU9-dA-y2c"/>
                             <constraint firstAttribute="leadingMargin" secondItem="v6g-sq-IiY" secondAttribute="leading" id="x3a-AG-aeb"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="confirmButton" destination="A50-JX-sQR" id="HX2-2Y-FA3"/>
-                        <outlet property="confirmText" destination="avI-qv-LuV" id="eJS-0L-eGe"/>
+                        <outlet property="buttonAccept" destination="A50-JX-sQR" id="xrl-f5-5k4"/>
+                        <outlet property="buttonBack" destination="Yb2-S8-afN" id="AG0-A5-n3K"/>
+                        <outlet property="text" destination="avI-qv-LuV" id="Qop-oJ-iFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSr-CZ-O4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2603" y="-380"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v2p-Jp-nG7">
+            <objects>
+                <viewController id="mqG-rv-Zad" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fjt-g7-Oti"/>
+                        <viewControllerLayoutGuide type="bottom" id="TRB-jQ-Zgk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3rj-GX-Zbn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFq-Ah-bIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2993" y="-380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qut-tw-drf">

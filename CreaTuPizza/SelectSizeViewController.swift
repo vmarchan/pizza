@@ -65,7 +65,7 @@ class SelectSizeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if segue.identifier == "SizeSegue" {
             
-            let nextPage = segue.destinationViewController as! RoughTypeViewController
+            let nextPage: RoughTypeViewController = segue.destinationViewController as! RoughTypeViewController
             nextPage.sizePizza = self.selectedSize
         }
     }

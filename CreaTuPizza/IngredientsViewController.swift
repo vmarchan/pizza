@@ -14,7 +14,6 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     var roughType: String!
     var cheeseType: String!
     var selectedIngredients: [String] = []
-//    var selectedIngredient : String!
     
     let ingredients = ["Jamón", "Pepperoni", "Pavo", "Salchicha", "Aceituna", "Cebolla", "Pimiento", "Piña", "Anchoa", "Atún", "Champiñones"]
     
@@ -32,7 +31,6 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         self.table.tableFooterView = UIView()
         
         buttonConfirm.setTitle("Confirmar", forState: UIControlState.Normal)
-        buttonConfirm.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         buttonConfirm.backgroundColor = UIColor.brownColor()
         buttonConfirm.layer.cornerRadius = 20
         buttonConfirm.layer.borderWidth = 0
@@ -76,9 +74,6 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
                 self.selectedIngredients.append(self.ingredients[indexPath.row])
             }
         }
-        
-//        self.selectedIngredient = self.ingredients[indexPath.row]
-        
     }
     
     // MARK: - Navigation
@@ -94,8 +89,9 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
             nextPage.sizePizza = self.sizePizza
             nextPage.roughType = self.roughType
             nextPage.cheeseType = self.cheeseType
-            nextPage.ingredients = self.selectedIngredients
-//            nextPage.ingredient = self.selectedIngredient
+            if self.selectedIngredients.count != 0 {
+                nextPage.ingredients = self.selectedIngredients
+            }
         }
     }
 

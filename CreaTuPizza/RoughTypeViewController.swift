@@ -68,7 +68,7 @@ class RoughTypeViewController: UIViewController, UITableViewDelegate, UITableVie
         
         if segue.identifier == "RoughSegue" {
             
-            let nextPage = segue.destinationViewController as! CheeseTypeViewController
+            let nextPage: CheeseTypeViewController = segue.destinationViewController as! CheeseTypeViewController
             nextPage.sizePizza = self.sizePizza
             nextPage.roughType = self.selectedRough
         }
