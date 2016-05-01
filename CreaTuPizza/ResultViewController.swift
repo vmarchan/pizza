@@ -28,6 +28,10 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backToRoot(sender: AnyObject) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

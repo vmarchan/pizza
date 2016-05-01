@@ -478,7 +478,7 @@
                                 </state>
                                 <connections>
                                     <action selector="backActionButton:" destination="6nI-Ub-r9A" eventType="touchUpInside" id="8hp-Fw-Hth"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="2Uk-ed-UDD"/>
+                                    <action selector="backToRoot:" destination="mqG-rv-Zad" eventType="touchUpInside" id="9kU-Yl-dRK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -527,7 +527,4 @@
     <resources>
         <image name="pizza-vector" width="200" height="200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="2Uk-ed-UDD"/>
-    </inferredMetricsTieBreakers>
 </document>
