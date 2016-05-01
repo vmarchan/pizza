@@ -44,7 +44,10 @@ class ConfirmViewController: UIViewController {
         buttonBack.layer.shadowColor = UIColor.grayColor().CGColor
         buttonBack.layer.shadowOpacity = 1
         buttonBack.layer.shadowOffset = CGSizeMake(1, 1)
-        
+    
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.text.text = "TAMAÑO: \(self.sizePizza).\n\nMASA: \(self.roughType).\n\nQUESO: \(self.cheeseType).\n\nINGREDIENTES: \(self.ingredients).\n\nPrecio: \(randomValues())$"
     }
 

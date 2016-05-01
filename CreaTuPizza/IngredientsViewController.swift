@@ -76,6 +76,13 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        if self.selectedIngredients.contains(self.ingredients[indexPath.row]) {
+            let index = self.selectedIngredients.indexOf(self.ingredients[indexPath.row])
+            self.selectedIngredients.removeAtIndex(index!)
+        }
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
