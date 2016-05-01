@@ -448,10 +448,10 @@
             </objects>
             <point key="canvasLocation" x="2603" y="-380"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="v2p-Jp-nG7">
             <objects>
-                <viewController id="mqG-rv-Zad" sceneMemberID="viewController">
+                <viewController id="mqG-rv-Zad" customClass="ResultViewController" customModule="CreaTuPizza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fjt-g7-Oti"/>
                         <viewControllerLayoutGuide type="bottom" id="TRB-jQ-Zgk"/>
@@ -459,10 +459,45 @@
                     <view key="view" contentMode="scaleToFill" id="3rj-GX-Zbn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW8-WW-dwt">
+                                <rect key="frame" x="20" y="72" width="280" height="422"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vh-uQ-O0K">
+                                <rect key="frame" x="8" y="502" width="304" height="58"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="XPZ-XA-LSr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Volver">
+                                    <color key="titleColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backActionButton:" destination="6nI-Ub-r9A" eventType="touchUpInside" id="8hp-Fw-Hth"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="2Uk-ed-UDD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96358409889999996" blue="0.86271515539999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0vh-uQ-O0K" firstAttribute="leading" secondItem="3rj-GX-Zbn" secondAttribute="leadingMargin" constant="-12" id="IlC-EY-fBq"/>
+                            <constraint firstItem="TRB-jQ-Zgk" firstAttribute="top" secondItem="0vh-uQ-O0K" secondAttribute="bottom" constant="8" id="N4x-pi-p4I"/>
+                            <constraint firstItem="0vh-uQ-O0K" firstAttribute="top" secondItem="HW8-WW-dwt" secondAttribute="bottom" constant="8" id="QFg-1o-BSZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HW8-WW-dwt" secondAttribute="trailing" id="X9I-fq-lQI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0vh-uQ-O0K" secondAttribute="trailing" constant="-12" id="esA-Pj-c5K"/>
+                            <constraint firstItem="HW8-WW-dwt" firstAttribute="top" secondItem="Fjt-g7-Oti" secondAttribute="bottom" constant="8" id="maW-Ej-ZK5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HW8-WW-dwt" secondAttribute="leading" id="mnL-H0-Bia"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="textFinal" destination="HW8-WW-dwt" id="JJL-P3-6F4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFq-Ah-bIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,4 +527,7 @@
     <resources>
         <image name="pizza-vector" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Uk-ed-UDD"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,7 @@
 		5AD534FC1CD68DD700DBAD90 /* CheeseTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD534FB1CD68DD700DBAD90 /* CheeseTypeViewController.swift */; };
 		5AD534FE1CD68DE800DBAD90 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD534FD1CD68DE800DBAD90 /* IngredientsViewController.swift */; };
 		5AD535061CD6C23300DBAD90 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD535051CD6C23300DBAD90 /* ConfirmViewController.swift */; };
+		5AD535081CD6C74500DBAD90 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD535071CD6C74500DBAD90 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5AD534FB1CD68DD700DBAD90 /* CheeseTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheeseTypeViewController.swift; sourceTree = "<group>"; };
 		5AD534FD1CD68DE800DBAD90 /* IngredientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		5AD535051CD6C23300DBAD90 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		5AD535071CD6C74500DBAD90 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				5AD534FB1CD68DD700DBAD90 /* CheeseTypeViewController.swift */,
 				5AD534FD1CD68DE800DBAD90 /* IngredientsViewController.swift */,
 				5AD535051CD6C23300DBAD90 /* ConfirmViewController.swift */,
+				5AD535071CD6C74500DBAD90 /* ResultViewController.swift */,
 			);
 			path = CreaTuPizza;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				5AD534F81CD68D6200DBAD90 /* SelectSizeViewController.swift in Sources */,
 				5AD534E81CD68C9400DBAD90 /* ViewController.swift in Sources */,
 				5AD534FA1CD68D8B00DBAD90 /* RoughTypeViewController.swift in Sources */,
+				5AD535081CD6C74500DBAD90 /* ResultViewController.swift in Sources */,
 				5AD534FE1CD68DE800DBAD90 /* IngredientsViewController.swift in Sources */,
 				5AD534FC1CD68DD700DBAD90 /* CheeseTypeViewController.swift in Sources */,
 				5AD535061CD6C23300DBAD90 /* ConfirmViewController.swift in Sources */,
