@@ -114,9 +114,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ACK-zI-Vcr" kind="show" identifier="SizeSegue" id="r4H-AU-kqo"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -136,6 +133,7 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="table" destination="49w-T4-qr4" id="ZZZ-4E-cej"/>
+                        <segue destination="ACK-zI-Vcr" kind="show" identifier="SizeSegue" id="p81-g9-vY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAb-Rf-za2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,9 +181,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Mtf-2y-65X" kind="show" identifier="RoughSegue" id="5v7-T1-d4D"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -205,6 +200,7 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="table" destination="tHm-5B-ZnK" id="8DB-0X-3xQ"/>
+                        <segue destination="Mtf-2y-65X" kind="show" identifier="RoughSegue" id="Mxl-tt-hgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byw-7C-SCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,9 +248,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="FYo-Px-3or" kind="show" identifier="CheeseSegue" id="JPH-Zp-VTf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -274,6 +267,7 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="table" destination="kOi-M8-j83" id="duv-FS-MFq"/>
+                        <segue destination="FYo-Px-3or" kind="show" identifier="CheeseSegue" id="CVk-gw-Zlu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJJ-Tv-GIT" userLabel="First Responder" sceneMemberID="firstResponder"/>

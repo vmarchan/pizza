@@ -55,7 +55,7 @@ class CheeseTypeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedCheese = self.cheeseType[indexPath.row]
-        
+        self.performSegueWithIdentifier("CheeseSegue", sender: nil)
     }
     
     

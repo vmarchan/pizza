@@ -55,7 +55,7 @@ class RoughTypeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedRough = self.roughType[indexPath.row]
-        
+        self.performSegueWithIdentifier("RoughSegue", sender: nil)
     }
     
     

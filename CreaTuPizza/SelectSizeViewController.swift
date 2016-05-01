@@ -52,6 +52,7 @@ class SelectSizeViewController: UIViewController, UITableViewDelegate, UITableVi
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedSize = self.sizePizza[indexPath.row]
+        self.performSegueWithIdentifier("SizeSegue", sender: nil)
 
     }
     
@@ -65,7 +66,7 @@ class SelectSizeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if segue.identifier == "SizeSegue" {
             
-            let nextPage: RoughTypeViewController = segue.destinationViewController as! RoughTypeViewController
+            let nextPage = segue.destinationViewController as! RoughTypeViewController
             nextPage.sizePizza = self.selectedSize
         }
     }
