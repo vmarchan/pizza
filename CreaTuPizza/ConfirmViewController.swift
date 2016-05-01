@@ -45,7 +45,7 @@ class ConfirmViewController: UIViewController {
         buttonBack.layer.shadowOpacity = 1
         buttonBack.layer.shadowOffset = CGSizeMake(1, 1)
         
-        self.text.text = "TAMAÑO: \(self.sizePizza).\n\nMASA: \(self.roughType).\n\nQUESO: \(self.cheeseType).\n\nINGREDIENTES: \(self.ingredients)"
+        self.text.text = "TAMAÑO: \(self.sizePizza).\n\nMASA: \(self.roughType).\n\nQUESO: \(self.cheeseType).\n\nINGREDIENTES: \(self.ingredients).\n\nPrecio: \(randomValues())$"
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +58,10 @@ class ConfirmViewController: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
+    func randomValues() -> NSInteger {
+        
+        return Int(arc4random_uniform(20)) + 10
+    }
     /*
     // MARK: - Navigation
 
